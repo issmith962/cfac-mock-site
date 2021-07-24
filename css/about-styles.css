@@ -1,0 +1,200 @@
+* {
+	font-family: 'Roboto', sans-serif;
+	margin:0px;
+	padding:0px;
+}
+
+body {
+	display:flex;
+	flex-direction:column;
+}
+
+div {
+	position:relative;
+	z-index:2;
+}
+
+img {
+	display:inline;
+	margin:0 auto;
+	height:100%;
+	width:auto;
+}
+
+
+h4 {
+	font-weight:300;
+}
+
+.header-container {
+	z-index:999;
+}
+
+.header {
+	background-color:#FFF;
+	height:10vh;
+	width:100%;
+	position:fixed;
+	top:0;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+	display:flex;
+}
+
+.header img {
+	max-width:50px;
+	min-height:20px;
+	height:auto;
+	width:100%;
+}
+
+.border {
+	margin:3vw;
+	border-left:2px solid #002E5D;
+}
+
+.department-header {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.header .logo-holder {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-height:56px;
+	background-repeat:no-repeat;
+	margin-left:3vw;
+}
+
+.title-box {
+	background-color:#002E5D;
+	width:100%;
+	height:23vh;
+	top:10vh;
+}
+
+.content-container {
+	min-height:72vh;
+	/*
+	background-color:#FFF;
+	opacity:0.85;
+	*/
+	width:100%;
+	background-color:#E5E5E5;
+	display:flex;
+	flex-direction:column;
+}
+
+.content-box {
+	width:100%;
+	height:100%;
+	background-color:#FFF;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+.footer {
+	background-color:#666666;
+	height:5vh;
+	width:100%;
+}
+
+.faculty-member {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	margin-top:3vh;
+	height:15vh;
+	margin-left:4vw;
+}
+
+.picture-container {
+	width:12vh;
+	height:12vh;
+	position:relative;
+	overflow:hidden;
+	border-radius:50%;
+}
+
+.text-container {
+	display:flex;
+	flex-direction:column;
+	margin-left:2vw;
+}
+
+.name-box {
+	margin-top:2vh;
+}
+
+.about-box {
+	margin-top:1.5vh;
+}
+
+#page-header {
+	font-weight:400;
+}
+
+#faculty-title {
+	color:#FFF;
+	margin-top:4vh;
+	text-transform:uppercase;
+	font-size:2em;	
+	margin-left:4vw;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.header {
+		height:68px;
+	}
+	.title-box {
+		top:68px;
+		height:25vh;
+	}
+	.content-container {
+	}
+
+	.content-wrapper {
+		background-color:#FFF;
+		width:76vw;
+		height:100%;
+		margin:0vh 12vw;
+		margin-bottom:4vh;
+	}
+
+	.content-box {
+		height:auto;
+		width:76vw;
+		z-index:3;
+		top:-3vh;
+	}
+
+	.faculty-member {
+		width:50%;
+		margin-left:0;
+	}
+	
+	#faculty-title {
+		margin-left:12vw;
+		font-size:2.5em;	
+	}
+	.header .logo-holder {
+		margin-left:2vw;
+	}
+	.border {
+		margin:3vh;
+		border-left:2px solid #002E5D;
+	}
+}
