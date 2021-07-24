@@ -1,5 +1,5 @@
 * {
-	font-family:"Roboto",sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin:0px;
 	padding:0px;
 }
@@ -9,15 +9,11 @@ body {
 
 div {
 	position:relative;
-	z-index:2; 
+	z-index:2;
 }
-
-img {
-	width:100%;
-	height:100%;
-	object-fit:cover;
-	background-position:center center;
-	background-repeat:no-repeat;
+.page {
+	display:flex; 
+	flex-direction:column;
 }
 
 .header-container {
@@ -25,12 +21,14 @@ img {
 }
 
 .header {
-	width:100%;
-	height:10vh;
 	background-color:#FFF;
+	height:10vh;
+	width:100%;
 	position:fixed;
 	top:0;
-	box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+	display:flex;
+	flex-direction:row;
 }
 
 .content-container {
@@ -54,44 +52,91 @@ img {
 }
 
 .footer {
-	width:100%;
-	height:5vh;
 	background-color:#666666;
+	height:5vh;
+	width:100%;
 }
 
 #cover-pic-container {
-	width:100%;
 	height:90vh;
+	width:100%;
 	background-position:center center;
 	overflow:hidden;
-
+	
 	position:fixed;
 	top:10vh;
 }
 
 #spacer {
-	width:100%;
-	height:10vh;
 	margin-top:90vh;
+	height:10vh;
+	width:100%;
 	display:flex;
 	flex-direction:row;
 }
 
 #left-space {
-	width:70vw;
 	height:100%;
+	width:70vw;
 	background-color:#002E5D;
+
 	display:flex;
 	justify-content:center;
 	align-items:center;
 }
 
+#intro {
+	color:#fff;
+}
+
 #right-space {
 	height:100%;
 	width:30vw;
-	background-color:#FFF;
+	background-color:#fff;
 	opacity:0.85;
 }
+
+#cover-pic-container img {
+	background-position:center center;
+	background-repeat:no-repeat;
+	object-fit:cover;
+	height:100%;
+	width:100%;
+}
+
+#page-header {
+	font-weight:400;
+}
+
+.header .logo-holder {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-height:56px;
+	background-repeat:no-repeat;
+	margin-left:3vw;
+}
+
+.border {
+	margin:3vw;
+	border-left:2px solid #002E5D;
+}
+
+.header img {
+	max-width:50px;
+	min-height:20px;
+	height:auto;
+	width:100%;
+}
+
+.department-header {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+
+	
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {...}
@@ -110,8 +155,17 @@ img {
 	#cover-pic-container {
 		top:68px;
 	}
+	.header .logo-holder {
+		margin-left:2vw;
+	}
+	.border {
+		margin:2vh;
+		border-left:2px solid #002E5D;
+	}
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {...}
+
 
