@@ -19,10 +19,3 @@ document.getElementById("submitBox").addEventListener("click", function(event) {
 		document.getElementById("submitted").style.display = "flex";
 	}
 }); 
-
-
-
-
-
-
-	 

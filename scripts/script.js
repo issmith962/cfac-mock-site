@@ -1,7 +1,6 @@
 function expandMenu() {
 	document.getElementById("dropdownMenu").classList.toggle("show");
 }
-
 window.onclick = function(event) {
 	if (!event.target.matches("#hamburger")) {
 		var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -14,5 +13,3 @@ window.onclick = function(event) {
 		}
 	}
 }
-
-
