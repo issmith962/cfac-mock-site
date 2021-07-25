@@ -227,12 +227,11 @@ li:hover a {
 	margin-bottom:4vh;
 	background-color:rgba(255,255,255,1);
 }
-
-.content {
+.content a {
 	display:flex;
 	flex-wrap:wrap;
+	flex-direction:row;
 }
-
 .text-container {
 	width:80vw;
 	height:20vh;
@@ -241,12 +240,12 @@ li:hover a {
 	justify-content:center;
 	color:#002E5D;
 }
-.text-container h2 {
-	margin-left:2vh;
+.text-container div h2 {
+	margin-left:2vw;
 	margin-bottom:2vh;
 }
 .text-container h4 {
-	margin-left:2vh;
+	margin-left:2vw;
 	color:#002E5D;
 }
 
@@ -292,6 +291,26 @@ li:hover a {
 	}
 	.content-box {
 		height:50vh;
+	}
+	.text-container {
+		width:40vw;
+		height:50vh;
+		align-items:center;
+	}
+	.text-container div h2 {
+		text-align:left;
+	}
+	.text-container div {
+		width:22vw;
+	}
+
+	.text-container h4 {
+		width:20vw;
+	}
+	.img-container img {
+		width:40vw;
+		height:50vh;
+		object-fit:cover;
 	}
 }
 
