@@ -21,6 +21,15 @@ img {
 	width:auto;
 }
 
+input {
+	border:1px solid black;
+}
+
+h3 {
+	color:#002E5D;
+	margin:2vh 8px;
+	text-align:center;
+}
 
 h4 {
 	font-weight:300;
@@ -42,33 +51,6 @@ h4 {
 	justify-content:space-between;
 }
 
-.header img {
-	max-width:50px;
-	min-height:20px;
-	height:auto;
-	width:100%;
-}
-
-.border {
-	margin:3vw;
-	border-left:2px solid #002E5D;
-}
-
-.department-header {
-	display:flex;
-	justify-content:center;
-	align-items:center;
-}
-
-.header .logo-holder {
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	min-height:56px;
-	background-repeat:no-repeat;
-	margin-left:3vw;
-}
-
 .title-box {
 	background-color:#002E5D;
 	width:100%;
@@ -77,7 +59,7 @@ h4 {
 }
 
 .content-container {
-	min-height:72vh;
+	min-height:70vh;
 	/*
 	background-color:#FFF;
 	opacity:0.85;
@@ -93,14 +75,104 @@ h4 {
 	height:100%;
 	background-color:#FFF;
 	display:flex;
-	flex-direction:row;
+	flex-direction:column;
+}
+
+input, textarea, select {
+	margin-right:16px;
+}
+
+.flex-outer li {
+	display:flex;
 	flex-wrap:wrap;
+	align-items:center;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+ 
+.flex-outer > li > label + * {
+  flex: 1 0 220px;
+}
+.content-box * {
+  box-sizing: border-box;
+}
+
+.flex-outer {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+  /*font-weight: 300;*/
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer > li > label + * {
+  flex: 1 0 220px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea {
+  padding: 15px;
+  /*border: none;*/
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  /*color: #f2f2f2;*/
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+#submit-box {
+	display:flex;
+	justify-content:center;
+}
+
+#submit-box input {
+	background-color:#0062B8;
+	border:none;
+	color:#FFF;
+	margin-bottom:2vh;
 }
 
 .footer {
 	display:flex;
-	flex-direction:column;
 	justify-content:center;
+	flex-direction:column;
 	align-items:center;
 	background-color:#002E5D;
 	height:5vh;
@@ -120,47 +192,46 @@ h4 {
 }
 
 
-.faculty-member {
-	display:flex;
-	flex-direction:row;
-	justify-content:center;
-	margin-top:3vh;
-	height:15vh;
-	margin-left:4vw;
-}
-
-.picture-container {
-	width:12vh;
-	height:12vh;
-	position:relative;
-	overflow:hidden;
-	border-radius:50%;
-}
-
-.text-container {
-	display:flex;
-	flex-direction:column;
-	margin-left:2vw;
-}
-
-.name-box {
-	margin-top:2vh;
-}
-
-.about-box {
-	margin-top:1.5vh;
-}
-
-#page-header {
-	font-weight:400;
-}
-
-#faculty-title {
+#audition-title {
 	color:#FFF;
 	margin-top:4vh;
 	text-transform:uppercase;
 	font-size:2em;	
 	margin-left:4vw;
+}
+	
+.header .logo-holder {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-height:56px;
+	background-repeat:no-repeat;
+	margin-left:3vw;
+}
+
+.border {
+	margin:3vw;
+	border-left:2px solid #002E5D;
+}
+
+.header img {
+	max-width:50px;
+	min-height:20px;
+	height:auto;
+	width:100%;
+}
+
+.department-header {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+#page-header {
+	color:#000;
+	font-weight:400;
+	text-align:left;
+	margin:0;
 }
 
 ul {
@@ -242,6 +313,8 @@ li:hover a {
 
 
 
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {...}
 
@@ -278,20 +351,13 @@ li:hover a {
 		top:-3vh;
 	}
 
-	.faculty-member {
-		width:50%;
-		margin-left:0;
-	}
-	
-	#faculty-title {
+	#audition-title {
 		margin-left:12vw;
 		font-size:2.5em;	
 	}
-
 	.header .logo-holder {
 		margin-left:2vw;
 	}
-	
 	.border {
 		margin:2vh;
 		border-left:2px solid #002E5D;
@@ -303,3 +369,13 @@ li:hover a {
 		display:flex;
 	}
 }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+
+
+
+
+
+
