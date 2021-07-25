@@ -45,39 +45,50 @@
 
 		<div class="content-container">
 			<div class="content-wrapper">
-				<div class="content-box">
+				<div id="submitted" class="content-box">
+					<div>
+						<h2>Wow you submitted!</h2>
+						<h3>Photo Credits:</h3>
+						<h5>
+							"Dance Co." by Marco P. Sanchez is licensed under CC BY 2.0<br>
+							"File:KC Ballet BDPX5272-2 (25041450851).jpg" by KCBalletMedia is licensed under CC BY 2.0<br>
+							"Student life at BYU" by Wes & Eli is licensed under CC BY-NC-SA 2.0<br>
+						</h5>
+					</div>
+				</div>
+				<div id="content" class="content-box">
 					<h3>Sign Up For An Audition</h3>
 
 					<form id="auditionForm">
 						<ul class="flex-outer">
 							<li>
 								<label for="danceTypes">Area of Dance</label>
-								<select id="danceTypes">
-									<option value="1">Select</option>
-									<option value="2">Contemporary</option>
-									<option value="3">Ballet</option>
-									<option value="4">Ballroom</option>
-									<option value="5">Musical Dance Theatre</option>
-									<option value="6">Cultural Dance</option>
+								<select id="danceTypes" required>
+									<option value="">Select</option>
+									<option value="1">Contemporary</option>
+									<option value="2">Ballet</option>
+									<option value="3">Ballroom</option>
+									<option value="4">Musical Dance Theatre</option>
+									<option value="5">Cultural Dance</option>
 								</select>
 							</li>
 							<li>
 								<label for="name">Name</label>
-								<input id="name" placeholder="Enter your name here" type="text"></input><br/>
+								<input id="name" placeholder="Enter your name here" type="text" required></input><br/>
 							</li>
 							<li>
 								<label for="email">Email</label>
-								<input id="email" placeholder="Enter your email here" type="text"></input><br/>
+								<input id="email" placeholder="Enter your email here" type="text" required></input><br/>
 							</li>
 							<li>
 								<label for="phone">Phone</label>
-								<input id="phone" placeholder="Enter your phone number here" type="text"></input><br/>
+								<input id="phone" placeholder="Enter your phone number here" type="text" required></input><br/>
 							</li>
 							<li>
 								<label for="experience">Experience</label>
-								<textarea rows="3" id="experience" placeholder="Enter your relevant experience here"></textarea>
+								<textarea rows="3" id="experience" placeholder="Enter your relevant experience here" required></textarea>
 							</li>
-							<li id="submit-box">
+							<li id="submitBox">
 								<input id="submitForm" class="bg-darkest color-light" type="submit" value="Submit"></input>
 							</li>
 						</ul>
@@ -90,5 +101,7 @@
 			<img class="byu-footer__byu-link-logo" src="https://brand.byu.edu/wp-content/themes/pg-core/byu-theme/images/university-logo.svg" alt="Brigham Young University">
 			<a href="https://icons8.com/icon/8113/menu">Menu icon by Icons8</a>
 		</div>
+
+		<script text="type/javascript" src="/scripts/audition-script.js"></script>
 	</body>
 </html>

@@ -157,16 +157,34 @@ input, textarea, select {
   border-radius: 2px;
 }
 
-#submit-box {
+#submitBox {
 	display:flex;
 	justify-content:center;
 }
 
-#submit-box input {
+#submitBox input {
 	background-color:#0062B8;
 	border:none;
 	color:#FFF;
 	margin-bottom:2vh;
+}
+
+#submitted {
+	display:none;
+	text-align:left;
+}
+
+#submitted div {
+	margin:3vh;
+}
+
+#submitted div h2 {
+	margin-bottom:2vh;
+}
+
+#submitted div h3 {
+	text-align:left;
+	margin:0;
 }
 
 .footer {
